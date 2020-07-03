@@ -5,7 +5,8 @@
 </div>
 <br />
 
-<%= link_to "Edit Post", edit_post_path(@post) %>
+<% if @post.image %> <%= image_tag @post.image, style: "width: 200px; display:
+block" %> <% end %> <%= link_to "Edit Post", edit_post_path(@post) %>
 
 <br />
 <%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm:
